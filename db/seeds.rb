@@ -10,4 +10,15 @@ puts "📃 Seeding data..."
 
 User.create!(username: "test", password: "password")
 
+8.times do
+
+    Product.create!(
+        name: Faker::Appliance.unique.equipment,
+        description: Faker::Marketing.buzzwords,
+        price: Faker::Number.unique.number(digits: 4),
+        img_url: "https://loremflickr.com/#{rand(130..190)}/#{rand(140..200)}/item"
+    )
+
+end
+
 puts "✅ done seeding!"
