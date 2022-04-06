@@ -5,4 +5,6 @@ class User < ApplicationRecord
     validates :username, :password, presence: true, on: :create
 
     has_many :orders
+
+    
 end
